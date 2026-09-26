@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Crop | Crop Connect</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="brand">Crop Connect</div>
+        <nav class="nav-links">
+          <a href="/farmer/dashboard.html">Dashboard</a>
+          <a href="/farmer/products.html">My Crops</a>
+          <a href="/farmer/add-product.html">Add Crop</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <div class="form-shell">
+        <h1>Add Crop</h1>
+        <form id="add-product-form" enctype="multipart/form-data">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Crop Name</label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select name="category" required>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Grains">Grains</option>
+                <option value="Pulses">Pulses</option>
+                <option value="Spices">Spices</option>
+                <option value="Cereals">Cereals</option>
+                <option value="Oil Seeds">Oil Seeds</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Price per unit</label>
+              <input type="number" name="price" required min="0" />
+            </div>
+            <div class="form-group">
+              <label>Available Quantity</label>
+              <input type="number" name="quantity" required min="0" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Unit</label>
+              <select name="unit" required>
+                <option value="kg">kg</option>
+                <option value="quintal">quintal</option>
+                <option value="ton">ton</option>
+                <option value="litre">litre</option>
+                <option value="dozen">dozen</option>
+                <option value="piece">piece</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" name="location" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Harvest Date</label>
+              <input type="date" name="harvestDate" />
+            </div>
+            <div class="form-group">
+              <label>Organic</label>
+              <select name="organic">
+                <option value="true">Organic</option>
+                <option value="false">Non-organic</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Product Image</label>
+            <input type="file" name="image" accept="image/*" />
+          </div>
+          <button class="btn btn-primary" type="submit">Add Crop</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/farmer.js"></script>
+  </body>
+</html>

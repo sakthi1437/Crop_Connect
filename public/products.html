@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Crops | Crop Connect</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="brand">Crop Connect</div>
+        <nav class="nav-links">
+          <a href="/">Home</a>
+          <a href="/products.html">Browse Crops</a>
+          <a href="/cart.html">Cart</a>
+          <a href="/orders.html">My Orders</a>
+          <a href="/profile.html">Profile</a>
+          <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Browse Fresh Crops</h1>
+        <div class="toolbar search-bar">
+          <input id="product-search" type="text" placeholder="Search tomatoes, rice, onions..." />
+        </div>
+        <div class="filter-grid">
+          <select id="filter-category">
+            <option value="">All Categories</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Grains">Grains</option>
+            <option value="Pulses">Pulses</option>
+            <option value="Spices">Spices</option>
+            <option value="Cereals">Cereals</option>
+          </select>
+          <select id="filter-organic">
+            <option value="">All</option>
+            <option value="true">Organic</option>
+            <option value="false">Non-organic</option>
+          </select>
+          <input id="filter-location" type="text" placeholder="Location" />
+          <input id="filter-min-price" type="number" placeholder="Min price" />
+          <input id="filter-max-price" type="number" placeholder="Max price" />
+          <button id="apply-filters" class="btn btn-primary">Apply</button>
+        </div>
+      </div>
+    </div>
+
+    <main class="container section">
+      <div id="product-list" class="grid grid-4"></div>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/products.js"></script>
+  </body>
+</html>
